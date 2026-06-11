@@ -85,6 +85,12 @@
             "link": "https://www.youtube.com/playlist?list=PLHg8TODa6qWZSkwLb1Ig8OZHKWrNB3Rpa",
             "percent": 100,
             "hz": 240
-        }
+        },
+        {
+            "user": "cube4222",
+            "link": "https://www.youtube.com/watch?v=9QjZ1lTXrzk",
+            "percent": 100,
+            "hz": 60
+        }    
     ]
 }
