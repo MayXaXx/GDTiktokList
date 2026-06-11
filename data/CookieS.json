@@ -9,16 +9,16 @@
     "password": "Copyable",
     "records": [
         {
-            "user": "ak4c",
-            "link": "https://youtu.be/dOsUcB-JsBY",
-            "percent": 100,
-            "hz": 240
-        },
-        {
             "user": "StickyMust",
             "link": "https://medal.tv/games/geometry-dash/clips/mSgn17HBCRU3esnZ1?invite=cr-MSx3RWssNDIwOTYyNzk4",
             "percent": 100,
             "hz": 60
+        },
+        {
+            "user": "ak4c",
+            "link": "https://youtu.be/dOsUcB-JsBY",
+            "percent": 100,
+            "hz": 240
         }
     ]
 }
