@@ -309,6 +309,12 @@
             "link": "https://www.youtube.com/playlist?list=PLHg8TODa6qWZSkwLb1Ig8OZHKWrNB3Rpa",
             "percent": 100,
             "hz": 240
+        },
+         {
+            "user": "Tzouvalos",
+            "link": "https://youtu.be/ojPzdP9q5dA",
+            "percent": 100,
+            "hz": 75
         }
     ]
 }
