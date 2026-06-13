@@ -8,6 +8,11 @@
     "percentToQualify": "100",
     "password": "Copyable",
     "records": [
+        {
+            "user": "fluxite",
+            "link": "https://www.youtube.com/watch?v=lgKx6BwgQY4",
+            "percent": 100,
+            "hz": 180
         }
     ]
 }
