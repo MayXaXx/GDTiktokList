@@ -147,6 +147,7 @@ export default {
     data: () => ({
         list: [],
         editors: [],
+        packs: [],
         loading: true,
         selected: 0,
         errors: [],
@@ -156,6 +157,12 @@ export default {
     computed: {
         level() {
             return this.list[this.selected][0];
+        },
+        levelPack() {
+            if (!this.level || !this.packs) return null;
+            return this.packs.find(pack =>
+                pack.levels.includes(this.level.path)
+            ) || null;
         },
         video() {
             if (!this.level.showcase) {
@@ -168,11 +175,13 @@ export default {
                     : this.level.verification
             );
         },
+        
     },
     async mounted() {
         // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
+        this.packs = await fetchPacks();
 
         // Error handling
         if (!this.list) {
