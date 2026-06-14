@@ -197,17 +197,18 @@
     font-size: 0.9rem;
 }
 
-.pack-levels {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.pack-badge-name {
+    flex: 1;
+    font-size: 0.9rem;
+    font-family: "Lexend Deca", sans-serif;  /* add this */
 }
 
-.pack-level-chip {
-    border: 1px solid;
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.75rem;
+.pack-badge-link {
     font-size: 0.85rem;
+    font-weight: 700;
+    font-family: "Lexend Deca", sans-serif;  /* add this */
+    text-decoration: none;
+    transition: opacity 100ms ease;
 }
 
 .level-pack-badge {
@@ -227,11 +228,13 @@
 .pack-badge-name {
     flex: 1;
     font-size: 0.9rem;
+    font-family: "Lexend Deca", sans-serif;  /* add this */
 }
 
 .pack-badge-link {
     font-size: 0.85rem;
     font-weight: 700;
+    font-family: "Lexend Deca", sans-serif;  /* add this */
     text-decoration: none;
     transition: opacity 100ms ease;
 }
