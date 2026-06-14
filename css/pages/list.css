@@ -161,3 +161,52 @@
     font-style: italic;
 }
 
+.page-packs {
+    display: block;
+    padding: 2rem;
+}
+
+.packs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.pack-card {
+    border-left: 4px solid;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-background-hover);
+}
+
+.pack-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.pack-icon {
+    font-size: 2rem;
+}
+
+.pack-desc {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.pack-levels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pack-level-chip {
+    border: 1px solid;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.85rem;
+}
+
