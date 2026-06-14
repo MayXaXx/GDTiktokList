@@ -1,0 +1,13 @@
+[
+    {
+        "id": "pack_001",
+        "name": "Mustard Pack",
+        "description": "All things mustard.",
+        "color": "#f5c542",
+        "icon": "🟡",
+        "levels": [
+            "uglymustard",
+            "CuteMustard"
+        ]
+    }
+]
