@@ -36,6 +36,37 @@ export async function fetchList() {
     }
 }
 
+export async function fetchPacks() {
+    try {
+        const packsResult = await fetch(`${dir}/_packs.json`);
+        const packs = await packsResult.json();
+
+        return await Promise.all(
+            packs.map(async (pack) => {
+                const levels = await Promise.all(
+                    pack.levels.map(async (path) => {
+                        try {
+                            const res = await fetch(`${dir}/${path}.json`);
+                            const level = await res.json();
+                            return { ...level, path };
+                        } catch {
+                            console.error(`Failed to load pack level: ${path}`);
+                            return null;
+                        }
+                    })
+                );
+                return {
+                    ...pack,
+                    resolvedLevels: levels.filter(Boolean)
+                };
+            })
+        );
+    } catch {
+        console.error('Failed to load packs.');
+        return null;
+    }
+}
+
 export async function fetchEditors() {
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
