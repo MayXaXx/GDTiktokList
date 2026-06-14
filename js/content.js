@@ -41,6 +41,10 @@ export async function fetchPacks() {
         const packsResult = await fetch(`${dir}/_packs.json`);
         const packs = await packsResult.json();
 
+        // fetch the list order so we know each level's index
+        const listResult = await fetch(`${dir}/_list.json`);
+        const listOrder = await listResult.json();
+
         return await Promise.all(
             packs.map(async (pack) => {
                 const levels = await Promise.all(
@@ -48,7 +52,8 @@ export async function fetchPacks() {
                         try {
                             const res = await fetch(`${dir}/${path}.json`);
                             const level = await res.json();
-                            return { ...level, path };
+                            const index = listOrder.indexOf(path); // find its position
+                            return { ...level, path, index };
                         } catch {
                             console.error(`Failed to load pack level: ${path}`);
                             return null;
