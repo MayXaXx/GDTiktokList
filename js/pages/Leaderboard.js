@@ -45,8 +45,8 @@ export default {
                     <div class="player">
                         <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
                         <h3>{{ entry.total }}</h3>
-                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
-                        <table class="table">
+                        <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length }})</h2>
+                        <table class="table" v-if="entry.verified.length > 0">
                             <tr v-for="score in entry.verified">
                                 <td class="rank">
                                     <p>#{{ score.rank }}</p>
@@ -60,21 +60,22 @@ export default {
                             </tr>
                         </table>
                         <h2 v-if="entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
-                        <table class="table">
+                        <table class="table" v-if="entry.completed.length > 0">
                             <tr v-for="score in entry.completed">
                                 <td class="rank">
                                     <p>#{{ score.rank }}</p>
                                 </td>
                                 <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                    <a v-if="score.link" class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                    <span v-else class="type-label-lg">{{ score.level }}</span>
                                 </td>
                                 <td class="score">
                                     <p>+{{ localize(score.score) }}</p>
                                 </td>
                             </tr>
                         </table>
-                        <h2 v-if="entry.progressed.length > 0">Progressed ({{entry.progressed.length}})</h2>
-                        <table class="table">
+                        <h2 v-if="entry.progressed.length > 0">Progressed ({{ entry.progressed.length }})</h2>
+                        <table class="table" v-if="entry.progressed.length > 0">
                             <tr v-for="score in entry.progressed">
                                 <td class="rank">
                                     <p>#{{ score.rank }}</p>
@@ -84,6 +85,20 @@ export default {
                                 </td>
                                 <td class="score">
                                     <p>+{{ localize(score.score) }}</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <h2 v-if="entry.packs && entry.packs.length > 0">Packs Completed ({{ entry.packs.length }})</h2>
+                        <table class="table" v-if="entry.packs && entry.packs.length > 0">
+                            <tr v-for="pack in entry.packs">
+                                <td class="rank">
+                                    <p>{{ pack.icon }}</p>
+                                </td>
+                                <td class="level">
+                                    <span class="type-label-lg">{{ pack.name }}</span>
+                                </td>
+                                <td class="score">
+                                    <p>+{{ localize(pack.score) }}</p>
                                 </td>
                             </tr>
                         </table>
@@ -101,7 +116,6 @@ export default {
         const [leaderboard, err] = await fetchLeaderboard();
         this.leaderboard = leaderboard;
         this.err = err;
-        // Hide loading spinner
         this.loading = false;
     },
     methods: {
