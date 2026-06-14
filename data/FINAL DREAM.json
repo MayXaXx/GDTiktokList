@@ -8,8 +8,7 @@
     "percentToQualify": "100",
     "password": "Copyable",
     "records": [
-    ]
-}
+        {
             "user": "sciordato",
             "link": "https://youtu.be/UMHrcDZMKm0",
             "percent": 100,
@@ -17,3 +16,4 @@
         }    
     ]
 }
+
