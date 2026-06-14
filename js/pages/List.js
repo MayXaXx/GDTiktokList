@@ -55,6 +55,15 @@ export default {
                             <p>{{ level.password || 'Free to Copy' }}</p>
                         </li>
                     </ul>
+
+                    <!-- Enjoyability Rating Bar -->
+                    <div class="enjoyability-wrapper">
+                        <div class="type-title-sm">Enjoyability Rating</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" :style="{ width: (level.enjoyability || 0) + '%' }"></div>
+                        </div>
+                        <span class="progress-label">{{ level.enjoyability || 0 }}/100</span>
+                    </div>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
                     <p v-else-if="selected +1 <= 150"><strong>100%</strong> or better to qualify</p>
