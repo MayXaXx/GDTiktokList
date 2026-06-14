@@ -40,6 +40,14 @@ export default {
                 <div class="level" v-if="level">
                     <h1>{{ level.name }}</h1>
                     <LevelAuthors :author="level.author" :creators="level.creators" :verifier="level.verifier"></LevelAuthors>
+                    <!-- Pack Badge -->
+                    <div v-if="levelPack" class="level-pack-badge" :style="{ borderColor: levelPack.color }">
+                        <span class="pack-badge-icon">{{ levelPack.icon }}</span>
+                        <span class="pack-badge-name">Part of <strong>{{ levelPack.name }}</strong></span>
+                        <router-link to="/packs" class="pack-badge-link" :style="{ color: levelPack.color }">
+                            View Pack →
+                        </router-link>
+                    </div>
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
