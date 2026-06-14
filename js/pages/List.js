@@ -59,10 +59,18 @@ export default {
                     <!-- Enjoyability Rating Bar -->
                     <div class="enjoyability-wrapper">
                         <div class="type-title-sm">Enjoyability Rating</div>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" :style="{ width: (level.enjoyability || 0) + '%' }"></div>
-                        </div>
-                        <span class="progress-label">{{ level.enjoyability || 0 }}/100</span>
+    
+                        <template v-if="level.enjoyability != null">
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" :style="{ width: level.enjoyability + '%' }"></div>
+                            </div>
+                            <span class="progress-label">{{ level.enjoyability }}/100</span>
+                        </template>
+
+                        <p v-else class="no-enjoyability">
+                            No Enjoyability Ratings have been given to this Level yet. 
+                            Submit a Rating in the #enjoyability-rating Channel on the Discord Server.
+                        </p>
                     </div>
                     <h2>Records</h2>
                     <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
