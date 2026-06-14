@@ -210,3 +210,33 @@
     font-size: 0.85rem;
 }
 
+.level-pack-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid;
+    border-radius: 0.5rem;
+    background-color: var(--color-background-hover);
+}
+
+.pack-badge-icon {
+    font-size: 1.25rem;
+}
+
+.pack-badge-name {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.pack-badge-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 100ms ease;
+}
+
+.pack-badge-link:hover {
+    opacity: 0.7;
+}
+
