@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Copyable",
     "records": [
+        {
+            "user": "ak4c",
+            "link": "https://youtu.be/whdchuhgY7I ",
+            "percent": 100,
+            "hz": 240
+        },
     ]
 }
