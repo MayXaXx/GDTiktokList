@@ -3,7 +3,7 @@
     "name": "Ugly Mustard",
     "author": "StickyMust",
     "creators": ["StickyMust "],
-    "verifier": "StickyMust",
+    "verifier": "ak4c",
     "verification": "https://youtu.be/u1eHkx7imk4",
     "percentToQualify": "100",
     "password": "Copyable",
@@ -41,12 +41,6 @@
         {
             "user": "Pablo",
             "link": "https://youtu.be/pE45Q91G0dA?is=hH-VwnYbaeJPKIUY",
-            "percent": 100,
-            "hz": 240
-        },
-        {
-            "user": "ak4c",
-            "link": "https://youtu.be/UFNLiRZoRx4",
             "percent": 100,
             "hz": 240
         },
