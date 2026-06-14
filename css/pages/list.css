@@ -154,3 +154,10 @@
     display: inline-block;
 }
 
+.no-enjoyability {
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
