@@ -28,6 +28,7 @@ export default {
                             :key="level.id"
                             class="pack-level-chip"
                             :style="{ borderColor: pack.color }"
+                            @click="goToLevel(level.index)"
                         >
                             {{ level.name }}
                         </li>
@@ -44,4 +45,6 @@ export default {
         this.packs = await fetchPacks();
         this.loading = false;
     },
-};
+    methods: {
+        goToLevel(index) {
+            if (index === -1) return; // level
