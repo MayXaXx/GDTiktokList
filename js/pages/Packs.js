@@ -47,4 +47,8 @@ export default {
     },
     methods: {
         goToLevel(index) {
-            if (index === -1) return; // level
+            if (index === -1) return;
+            this.$router.push({ path: '/', query: { level: index } });
+        }
+    }
+};
