@@ -1,0 +1,24 @@
+{
+    "id": 142819664,
+    "name": "Deaf circles",
+    "author": "hrsdss",
+    "creators": ["hrsdss"],
+    "verifier": "MakuGD",
+    "verification": "https://www.youtube.com/watch?v=w3mLjeOjWo0",
+    "percentToQualify": "100",
+    "password": "Copyable",
+    "records": [
+        {
+            "user": "Artec",
+            "link": "https://www.youtube.com/watch?v=Zuz197Q2ODA",
+            "percent": 100,
+            "hz": 240
+        },
+        {
+            "user": "MayXaX",
+            "link": "https://youtu.be/YWP8L7WoAVE",
+            "percent": 100,
+            "hz": 200
+        }
+    ]
+}
